@@ -33,23 +33,27 @@ system to play around with.
 
 ## Installation
 
-I did all this on my linux box. You will absolutely need a GPU to perform the wikipedia embedding.  
+I did all this on my linux box. You will absolutely need a GPU to perform the wikipedia embedding which took me about 
+14 hours on an Nvidia 2070 Super.
 
-Make a virtual environment and then pip install numpy, faiss_gpu, torch, transformers and datasets.
+Make a virtual environment and then install the following packages like so:
+~~~
+pip install jupyter numpy faiss_gpu torch transformers datasets.
+~~~~
 
 Then clone or fork the repo and put it wherever you like. That's basically it.
 
 ## How to use this repo
 
 If you just want to run this as quick as possible and play with it, you can use the 
-[\notebooks\quick_start.ipynb](\notebooks\quick_start.ipynb) jupyter notebook. 
-This notebook imports code in [\src\qa_utils.py](\src\qa_utils.py) in order
+[notebooks\qa_quick_start.ipynb](notebooks\qa_quick_start.ipynb) jupyter notebook. 
+This notebook imports code in [src\qa_utils.py](src\qa_utils.py) in order
 create the embeddings and also answer questions. Embedding wikipedia with the RETRIEBERT model
 took me about 14 hours using a Nvidea 2070 GPU. I don't provide the embeddings in this repo because they take over
 8GB of memory.
 
 If you want to understand what's going on under the hood you can look at the 
-[\notebooks\ELI5-redux.ipynb](\notebooks\ELI5-redux.ipynb) notebook. This works through the process of 
+[notebooks\qa_step_by_step.ipynb](notebooks\qa_step_by_step.ipynb) notebook. This works through the process of 
 setting up the QA system step by step. It borrows **a lot** from the original 
 [blog post]( https://yjernite.github.io/lfqa.html) and code.  It does (I think) perhaps explain
 some of the steps more clearly to someone who is newer at this.  I learned a lot working through this
