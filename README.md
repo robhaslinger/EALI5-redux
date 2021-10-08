@@ -23,7 +23,7 @@ useful to someone who is just starting to learn about modern QA systems, as I wa
 
 At a high level, this system takes the text of a wikipedia dump and cuts it up into shorter passages.
 These passages are then embedded into a 128 dimensional space using a small BERT model called 
-[RETRIEBERT](https://huggingface.co/transformers/model_doc/retribert.html). 
+[RetriBERT](https://huggingface.co/transformers/model_doc/retribert.html). 
 This model has two embedding heads, one for embedding passages and one for embedding questions. It was fit
 so that questions and relevant passages are close in the embedding space. These embedded passages are then
 used to make a [faiss](https://github.com/facebookresearch/faiss) index. 
