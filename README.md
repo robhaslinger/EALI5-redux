@@ -3,9 +3,13 @@
 This repo contains my re-implementation of the 
 ["Explain Anything Like I'm Five" blog post]( https://yjernite.github.io/lfqa.html) written by 
 [Yacine Jernite](https://yjernite.github.io/). I did not come up with this approach, or fit the
-models myself, however I wanted to work through the steps of setting one of these QA systems up
-and clearly understanding each step. This is the result. Hopefully the code and notebooks are 
-useful to someone who is just starting to learn about these systems, as I was. 
+models myself. The original code that does this is 
+[here](https://github.com/huggingface/notebooks/blob/master/longform-qa/lfqa_utils.py) 
+Instead this is a reimplementation and refactoring of the original code. My aim was to 
+work through the steps of setting up a question answering system
+and clearly understanding each step. This repository is the result. Hopefully the code, notebooks and
+comments I provide here are 
+useful to someone who is just starting to learn about QA systems, as I was at the time. 
 
 I chose this blog post after I became very interested in the subject of question answering,
 particularly involving the generation of a response, rather than extracting a passage from text.
@@ -20,7 +24,8 @@ At a high level, this system takes the text of a wikipedia dump and cuts it up i
 These passages are then embedded into a 128 dimensional space using a small BERT model called RETRIEBERT. 
 This model has two embedding heads, one for embedding passages and one for embedding questions. It was fit
 so that questions and relevant passages are close in the embedding space. These embedded passages are then
-used to make a faiss index. Faiss is a library from facebook that performs
+used to make a [faiss](https://github.com/facebookresearch/faiss) index. 
+Faiss is a library from facebook that performs
 super fast vector similarity search, as in billions of vectors searched.
 
 When a question is asked, it is embedded and then faiss is used to find the passages most similar in the
