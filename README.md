@@ -55,7 +55,7 @@ Then clone or fork the repo and put it wherever you like. That's basically it.
 If you just want to run this as quick as possible and play with it, you can use the 
 [notebooks/qa_quick_start.ipynb](notebooks/qa_quick_start.ipynb) jupyter notebook. 
 This notebook imports code in [src/qa_utils.py](src/qa_utils.py) in order
-create the embeddings and also answer questions. Embedding wikipedia with the RETRIEBERT model
+create the embeddings and also answer questions. Embedding wikipedia with the RetriBERT model
 took me about 14 hours using a Nvidea 2070 GPU. I don't provide the embeddings in this repo because they take over
 8GB of memory.
 
